@@ -1,45 +1,37 @@
-name: Graduation DevOps CI
+name: CI
 
 on:
   push:
-    branches:
-      - main
-
+    branches: [main]
   pull_request:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
-  test-iot:
+  validate:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: iot-simulator
-
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Python
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.12"
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install -r iot-simulator/requirements.txt
 
-      - name: Check Python Syntax
+      - name: Check Python syntax
         run: |
-          python -m py_compile simulator.py
+          python -m py_compile iot-simulator/simulator.py
 
-      - name: Verify Project Files
+      - name: Validate Docker Compose
         run: |
-          test -f simulator.py
-          test -f requirements.txt
-          test -f README.md
+          docker compose -f compose.yaml config
 
-      - name: CI Completed
-        run: echo "All checks passed successfully!"
+      - name: Build IoT Simulator image
+        run: |
+          docker build -t iot-simulator ./iot-simulator
