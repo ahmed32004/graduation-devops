@@ -1,0 +1,50 @@
+services:
+  mosquitto:
+    image: eclipse-mosquitto:2
+    container_name: mosquitto
+    restart: unless-stopped
+    ports:
+      - "1883:1883"
+    volumes:
+      - ./mosquitto/config/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/log:/mosquitto/log
+
+  nodered:
+    image: nodered/node-red:latest
+    container_name: nodered
+    restart: unless-stopped
+    ports:
+      - "1880:1880"
+    volumes:
+      - ./nodered-data:/data
+    depends_on:
+      - mosquitto
+
+  influxdb:
+    image: influxdb:2.7
+    container_name: influxdb
+    restart: unless-stopped
+    ports:
+      - "8086:8086"
+    volumes:
+      - ./influxdb-data:/var/lib/influxdb2
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./grafana-data:/var/lib/grafana
+    depends_on:
+      - influxdb
+
+  simulator:
+    build:
+      context: ./iot-simulator
+    container_name: simulator
+    restart: unless-stopped
+    depends_on:
+      - mosquitto

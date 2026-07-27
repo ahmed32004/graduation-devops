@@ -5,7 +5,7 @@ from datetime import datetime
 import paho.mqtt.client as mqtt
 
 # MQTT Configuration
-BROKER = "56.228.24.28"
+BROKER = "mosquitto"
 PORT = 1883
 TOPIC = "sensors/test"
 

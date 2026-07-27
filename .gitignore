@@ -1,0 +1,22 @@
+# Runtime data
+grafana-data/
+influxdb-data/
+nodered-data/
+mosquitto/data/
+mosquitto/log/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Logs
+*.log
+# Environment 
+.env
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
