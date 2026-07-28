@@ -9,6 +9,11 @@ services:
       - ./mosquitto/config/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
       - ./mosquitto/data:/mosquitto/data
       - ./mosquitto/log:/mosquitto/log
+    healthcheck:
+      test: ["CMD", "mosquitto", "-h"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
   nodered:
     image: nodered/node-red:latest
