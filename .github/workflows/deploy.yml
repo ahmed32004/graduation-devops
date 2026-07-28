@@ -20,6 +20,21 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
 
           script: |
+            set -e
+
             cd ~/graduation-cloud
+
+            echo "Updating project..."
             git pull origin main
+
+            echo "Starting containers..."
             docker compose up -d --build
+
+            echo "Running containers:"
+            docker ps
+
+            echo "Cleaning old Docker images..."
+            docker image prune -af || true
+            docker builder prune -af || true
+
+            echo "Deployment completed successfully."
