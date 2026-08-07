@@ -1,0 +1,29 @@
+# Sanitized strongSwan example for the lab.
+# The real PSK is deliberately NOT stored in GitHub.
+
+config setup
+    uniqueids=yes
+
+conn pfsense-aws
+    auto=add
+    keyexchange=ikev2
+    type=tunnel
+    authby=psk
+
+    left=%defaultroute
+    leftid=<AWS_ELASTIC_IP>
+    leftsubnet=172.31.42.241/32
+
+    right=%any
+    rightid=@pfsense-lab.local
+    rightsubnet=192.168.10.0/24,192.168.20.0/24,192.168.30.0/24,192.168.40.0/24
+
+    ike=aes256-sha256-modp2048!
+    esp=aes256-sha256!
+
+    ikelifetime=32400
+    lifetime=5400
+    dpdaction=clear
+    dpddelay=30s
+    keyingtries=%forever
+    forceencaps=yes

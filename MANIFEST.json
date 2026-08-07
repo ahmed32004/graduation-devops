@@ -1,0 +1,182 @@
+[
+  {
+    "path": ".gitignore",
+    "size_bytes": 329,
+    "sha256": "a05b83e04d0d6cbb8dd0bb5f5374e1b5911fbf0e99901a59d4ab42b537ea7f88"
+  },
+  {
+    "path": "README.md",
+    "size_bytes": 2637,
+    "sha256": "015ad7175648d9b9fb7a56200e3d3d322e7ce22093a6b85e9ceb221d2e368e42"
+  },
+  {
+    "path": "SECURITY.md",
+    "size_bytes": 615,
+    "sha256": "286448f960f7f3a3a4e2afe04d4e42e2e0b34e758c1c13d4b877037f1e9e5259"
+  },
+  {
+    "path": "network/configs/aws/README.md",
+    "size_bytes": 641,
+    "sha256": "0c8bb4ae1f8b2a3da03c012d9952d9042516da98d607e60aadeb0b5d6fcca0bd"
+  },
+  {
+    "path": "network/configs/aws/ipsec.conf.example",
+    "size_bytes": 603,
+    "sha256": "328d9d5687853058a4e226cfe0019c0c189233045980693c3f4dff761d948cf8"
+  },
+  {
+    "path": "network/configs/aws/ipsec.secrets.example",
+    "size_bytes": 124,
+    "sha256": "3cdb86da646e07ed5304effc4efcc7366e657bda71da8446ff766328f61001ce"
+  },
+  {
+    "path": "network/configs/cisco/CORE-01-HQ.cfg",
+    "size_bytes": 2968,
+    "sha256": "266eb8c0dc3abe8108788d77bb7cc0009eb791e14ce202ddb723098a70318095"
+  },
+  {
+    "path": "network/configs/cisco/CORE-01-current.cfg",
+    "size_bytes": 2877,
+    "sha256": "e39f8d76e51e0e72ef81c50bbe60365c4744d800b536a111108c6740a22a1a14"
+  },
+  {
+    "path": "network/configs/cisco/CORE-02-HQ.cfg",
+    "size_bytes": 2870,
+    "sha256": "d0cdc39314b158f4c0a9fa8437c8b80fead1fb8b40d1888d9167aa8ccec40420"
+  },
+  {
+    "path": "network/configs/cisco/CORE-03-HQ.cfg",
+    "size_bytes": 1904,
+    "sha256": "b0d42a0115f0635b1c518e6ef88d8314373f11a52e074b4471ed4d78a24b3b4c"
+  },
+  {
+    "path": "network/configs/cisco/CORE-04-HQ.cfg",
+    "size_bytes": 1904,
+    "sha256": "1432915415ece7c99726483a45057016001eb46a7efac9027c18bc86a6b7bfd7"
+  },
+  {
+    "path": "network/configs/cisco/ISP-current.cfg",
+    "size_bytes": 1386,
+    "sha256": "10e7faee8a09c042a536dd7792665ebe286105600a0f1db4a884bd4497ca0715"
+  },
+  {
+    "path": "network/configs/cisco/SW-L-01-B1.cfg",
+    "size_bytes": 1504,
+    "sha256": "b275638f645b6e1d54e19ef49146e063b92cf9ece2236b455d979848fa1741dd"
+  },
+  {
+    "path": "network/configs/cisco/SW-L-02-B2.cfg",
+    "size_bytes": 1504,
+    "sha256": "55cf12b9802f0e305ac905fb1a76c2fd78ebfa03feeeaa3bc22d02f9300e8424"
+  },
+  {
+    "path": "network/configs/cisco/SW-R-01-B3.cfg",
+    "size_bytes": 1555,
+    "sha256": "4568a0b46fc09d70cca65b4cb196b560e74e6e1e0014d79b1e37a745a713c388"
+  },
+  {
+    "path": "network/configs/cisco/SW-R-02-B4.cfg",
+    "size_bytes": 1504,
+    "sha256": "571c27d7cc723c2c4b85e532a745d18597ebdf740e7916656f21c0186d94298d"
+  },
+  {
+    "path": "network/configs/cisco/isp.cfg",
+    "size_bytes": 1594,
+    "sha256": "21bbd4275ca7e4adabbb15e2decbfa1651d3aa3cce0b2657d9d1fee2da59d847"
+  },
+  {
+    "path": "network/configs/pfsense/README.md",
+    "size_bytes": 1519,
+    "sha256": "d39a7c8e8db44476fcf37c0c87735bc1781589b3a73296c5c2d3583bb4ede788"
+  },
+  {
+    "path": "network/docs/ACCURACY_NOTES.md",
+    "size_bytes": 1407,
+    "sha256": "f99b0d67315c88753b2b32062455ca76b38f0285c9588c833d228afc3424d10d"
+  },
+  {
+    "path": "network/docs/IP_ADDRESSING.md",
+    "size_bytes": 1888,
+    "sha256": "6576a5fc94e2146d6cc9b41176460e8a56863abe6135337a34ed7d2e5481304e"
+  },
+  {
+    "path": "network/docs/NETWORK_ARCHITECTURE.md",
+    "size_bytes": 2000,
+    "sha256": "16644b715fd6861380079e7b40b9672c2f03fab10a1f9e515ece4b47bbed247b"
+  },
+  {
+    "path": "network/docs/PFSENSE_IPSEC.md",
+    "size_bytes": 1731,
+    "sha256": "5bdd8c94a1589863b54df173b592f9ff8976da566316d86455fcb2d4e484991b"
+  },
+  {
+    "path": "network/docs/ROUTING_AND_OSPF.md",
+    "size_bytes": 1616,
+    "sha256": "b863288a8a41595e8b44d13ecefffc76026e8f2363c944da8001c98fbddac1a8"
+  },
+  {
+    "path": "network/evidence/README.md",
+    "size_bytes": 1031,
+    "sha256": "a4d13ec5cb2d176a4d94556f9caab3f51839088dca80ba1b7f99188edce97ba7"
+  },
+  {
+    "path": "network/evidence/screenshots/01-pnetlab-full-topology.png",
+    "size_bytes": 936959,
+    "sha256": "348743aac3ea587c4c2d7b77a8cef85d7533cbd90536e2c45621827654a28dcd"
+  },
+  {
+    "path": "network/evidence/screenshots/02-pfsense-interface-assignments.png",
+    "size_bytes": 87162,
+    "sha256": "59b638262d79b8f4e5b85e339633e243ccaf4362754bde9262755c490d517359"
+  },
+  {
+    "path": "network/evidence/screenshots/03-pfsense-gateways.png",
+    "size_bytes": 110974,
+    "sha256": "b32aadff62d2081470114ba01537a183465754492fe3e53dc46e680021ec01b6"
+  },
+  {
+    "path": "network/evidence/screenshots/04-pfsense-static-routes.png",
+    "size_bytes": 97118,
+    "sha256": "a23d6717868345bc8f140538f2dab4802614e9c467959ae6a79876365e5e2158"
+  },
+  {
+    "path": "network/evidence/screenshots/05-pfsense-outbound-nat.png",
+    "size_bytes": 130629,
+    "sha256": "dfdbbef20b006ac072227b0b98fd200246f91ec04fb3433be4249a7579db023a"
+  },
+  {
+    "path": "network/evidence/screenshots/06-pfsense-lan-firewall-rules.png",
+    "size_bytes": 136837,
+    "sha256": "28c3acdf941bcbc64382930ce595e3ac60e774adf2f71461b30eadc78761352b"
+  },
+  {
+    "path": "network/evidence/screenshots/07-pfsense-ipsec-firewall-rules.png",
+    "size_bytes": 110689,
+    "sha256": "df53bc123da13eda1c73cc3a29615fd5e3441bf896dd8ff451ed038943d9f190"
+  },
+  {
+    "path": "network/evidence/screenshots/08-pfsense-ipsec-tunnels.png",
+    "size_bytes": 138106,
+    "sha256": "fa52d3a690255e9027c18354038eff1e5124715cf2df6286c930bb90ca53144d"
+  },
+  {
+    "path": "network/evidence/screenshots/09-pfsense-ipsec-status.png",
+    "size_bytes": 143091,
+    "sha256": "46ee79d1d537e7e9681e0c1a6fa2c16c7de3f7ca02b8a75bbf95947a771b43af"
+  },
+  {
+    "path": "network/lab/Graduation-Project-without-HSRP-sanitized.unl",
+    "size_bytes": 48370,
+    "sha256": "9c78d6f8fe53b762f74176e3033773313ac350895059e39fb3a4d5490ecf07e4"
+  },
+  {
+    "path": "network/lab/PNETLab-export-sanitized.zip",
+    "size_bytes": 5800,
+    "sha256": "cb2f8dd157a4db882694fa8cea17d77b1a4f51a3a6ecc9db35eefc9dc68ae792"
+  },
+  {
+    "path": "network/tests/VERIFICATION_MATRIX.md",
+    "size_bytes": 1646,
+    "sha256": "9372f45fa1d297ce5c5c2797e9b1c3fd4e19eed879661449cf366eded0b525c4"
+  }
+]

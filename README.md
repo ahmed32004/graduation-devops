@@ -1,107 +1,72 @@
-# IoT Monitoring System with DevOps & CI/CD
+# DevOps Automation for IoT Device Deployment Using AI
 
-## Overview
+## Network & Cloud Infrastructure — documented stage
 
-This project demonstrates a complete IoT monitoring system using modern DevOps practices.
+This repository package contains the **network infrastructure portion** of the graduation project. It is prepared as a reviewable GitHub structure with configuration, topology, security sanitization, and screenshot evidence.
 
-The system simulates IoT sensor data, sends it through an MQTT broker, processes it with Node-RED, stores it in InfluxDB, visualizes it using Grafana, and sends alerts through Telegram.
+> Scope note: this package focuses on the network layer. Docker Compose, MQTT/Node-RED/InfluxDB/Grafana, CI/CD, Telegram alerts, and the AI/anomaly-detection layer are intentionally outside this upload and can be added later.
 
-The entire deployment is automated using GitHub Actions and AWS EC2.
+## What is documented
 
----
+- PNETLab enterprise topology
+- Four-core OSPF campus design
+- Eight departmental VLANs
+- DHCP and router-on-a-stick gateway configuration
+- ISP routing and NAT
+- pfSense interfaces, gateways, static routes, firewall policy, and outbound NAT
+- pfSense ↔ AWS strongSwan IKEv2 IPsec configuration
+- Sanitized PNETLab export
+- Supplied screenshot evidence
+- Verification matrix showing what is proven and what remains pending
 
-## Architecture
+## Current VPN status evidenced by screenshots
 
-VM (Python Simulator)
-        │
-        ▼
-Mosquitto MQTT Broker
-        │
-        ▼
-Node-RED
-        │
-        ▼
-InfluxDB
-        │
-        ▼
-Grafana Dashboard
-        │
-        ▼
-Telegram Notifications
+- IKEv2 Phase 1: **Established**
+- CHILD SA / Phase 2: **Installed**
+- NAT-T: active
+- Local protected networks in current IPsec scope:
+  - `192.168.10.0/24`
+  - `192.168.20.0/24`
+  - `192.168.30.0/24`
+  - `192.168.40.0/24`
+- AWS protected host: `172.31.42.241/32`
 
----
+The supplied status screenshot was captured with packet counters at zero. Accordingly, this repository **does not claim final end-to-end data-plane validation yet**.
 
-## Technologies
-
-- Python
-- Docker
-- Docker Compose
-- Mosquitto MQTT
-- Node-RED
-- InfluxDB 2.x
-- Grafana
-- GitHub Actions
-- AWS EC2
-- Linux (Ubuntu)
-
----
-
-## Project Structure
+## Repository structure
 
 ```text
-graduation-devops/
-├── compose.yaml
+network/
+├── configs/
+│   ├── aws/
+│   ├── cisco/
+│   └── pfsense/
 ├── docs/
-├── iot-simulator/
-├── mosquitto/
-├── scripts/
-└── README.md
+│   ├── ACCURACY_NOTES.md
+│   ├── IP_ADDRESSING.md
+│   ├── NETWORK_ARCHITECTURE.md
+│   ├── PFSENSE_IPSEC.md
+│   └── ROUTING_AND_OSPF.md
+├── evidence/
+│   ├── README.md
+│   └── screenshots/
+├── lab/
+│   ├── Graduation-Project-without-HSRP-sanitized.unl
+│   └── PNETLab-export-sanitized.zip
+└── tests/
+    └── VERIFICATION_MATRIX.md
 ```
 
----
+## Start here
 
-## Running the Project
+1. [Network Architecture](network/docs/NETWORK_ARCHITECTURE.md)
+2. [IP Addressing Plan](network/docs/IP_ADDRESSING.md)
+3. [Routing and OSPF](network/docs/ROUTING_AND_OSPF.md)
+4. [pfSense and IPsec](network/docs/PFSENSE_IPSEC.md)
+5. [Screenshot Evidence](network/evidence/README.md)
+6. [Verification Matrix](network/tests/VERIFICATION_MATRIX.md)
+7. [Accuracy / Scope Notes](network/docs/ACCURACY_NOTES.md)
 
-Start the simulator:
+## Security
 
-```bash
-./scripts/run.sh
-```
-
-Start the project:
-
-```bash
-./scripts/start.sh
-```
-
-Check project status:
-
-```bash
-./scripts/status.sh
-```
-
-Stop cloud services:
-
-```bash
-./scripts/stop.sh
-```
-
----
-
-## CI/CD Pipeline
-
-Every push to the **main** branch automatically:
-
-- Validates the project
-- Connects to AWS EC2
-- Deploys the latest version
-- Restarts Docker services
-
----
-
-## Team Members
-
-- DevOps Engineer
-- IoT Engineer
-- Cloud Engineer
-- Network Engineer
+Real credential hashes, IOS line passwords, AWS private keys, and the IPsec PSK are not included. See [SECURITY.md](SECURITY.md).
